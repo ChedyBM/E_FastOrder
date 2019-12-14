@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="E_FastOrder1.Views.MenuPage"
+             Title="Menu">
+             
+    <StackLayout VerticalOptions="FillAndExpand">
+        <ListView x:Name="ListViewMenu"
+                    HasUnevenRows="True">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="75">
+                        <StackLayout Orientation="Horizontal">
+                            <Image HeightRequest="35" WidthRequest="35" Source= "{Binding image}" AnchorX="0.35"/>
+                            <Label Text="{Binding Id}" d:Text="{Binding .}" FontSize="20" TextColor="Black" AnchorY="0.4" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

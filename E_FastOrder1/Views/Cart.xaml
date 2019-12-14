@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="E_FastOrder1.Views.Cart"
+             Title="{Binding Title}">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Order" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Label x:Name="totallabel" Text="" FontSize="35" HorizontalOptions="CenterAndExpand"/>
+        <ListView x:Name="ItemsListView"
+                ItemsSource="{Binding CartList}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="false"
+                RowHeight="100"
+                  
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <RelativeLayout >
+                                <Label Text="{Binding Name}" 
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap" 
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="25"
+                                VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center"
+                                RelativeLayout.YConstraint=
+                                                "{ConstraintExpression 
+                                                        Type=RelativeToParent,
+                                                        Property=Height,
+                                                        Factor=0.5,
+                                                        Constant=-25}"
+                                 />
+                                <StackLayout
+                                    RelativeLayout.YConstraint=
+                                                "{ConstraintExpression 
+                                                        Type=RelativeToParent,
+                                                        Property=Height,
+                                                        Factor=0.5,
+                                                        Constant=-25}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1,Constant=0}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.85 ,Constant=0}"
+                                    HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Binding Price}"                                 
+                                    d:Text="Item descripton"
+                                    FontSize="20"
+                                     VerticalTextAlignment="Center"
+                                     />
+                                </StackLayout>
+                                <StackLayout
+                                    RelativeLayout.YConstraint=
+                                                "{ConstraintExpression 
+                                                        Type=RelativeToParent,
+                                                        Property=Height,
+                                                        Factor=0.5,
+                                                        Constant=-25}"
+                                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=0}"
+                                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1,Constant=0}"
+                                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.95 ,Constant=0}"
+                                    HorizontalOptions="EndAndExpand">
+                                    <Button ImageSource="xbtn.png" HeightRequest="25" WidthRequest="25" CornerRadius="12" Clicked="Button_Clicked"></Button>
+                                </StackLayout>
+                                </RelativeLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

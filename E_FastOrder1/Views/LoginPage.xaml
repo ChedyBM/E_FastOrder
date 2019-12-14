@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:E_FastOrder1.Behaviour"
+             xmlns:ViewModel="clr-namespace:E_FastOrder1.ViewModels"
+             mc:Ignorable="d"
+             x:Class="E_FastOrder1.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource NavigationPrimary}">
+            <Label Text="Wrong!"
+                   x:Name="err"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   IsVisible="False"
+                  TextColor="Red"/>
+            <Entry Placeholder="Username"
+                   x:Name="user"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Text="{Binding Login}">
+                <Entry.Behaviors>
+                    <local:LoginBehaviour/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Password"
+                   x:Name="pwd"
+                   WidthRequest="75"
+                IsPassword="True"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="FillAndExpand" Text="{Binding Password}">
+                <Entry.Behaviors>
+                    <local:PasswordBehaviour/>
+                </Entry.Behaviors>
+            </Entry>
+            <Button x:Name="btn" Text="Login" BackgroundColor="Green" Command="{Binding LoginCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
