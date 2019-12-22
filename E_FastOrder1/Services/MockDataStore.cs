@@ -28,14 +28,7 @@ namespace E_FastOrder1.Services
                         Price = "5.5dt",
                         cat_id = Categories.Plates
                     },
-                    new Product
-                    {
-                        Name = "Barakuda",
-                        Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                        Image = "ood.jpg",
-                        Price = "1.5dt",
-                        cat_id = Categories.Plates
-                    },
+                    
                     new Product
                     {
                         Name = "KickUp",
@@ -60,14 +53,7 @@ namespace E_FastOrder1.Services
                         Price = "1.5dt",
                         cat_id = Categories.Sandwich
                     },
-                    new Product
-                    {
-                        Name = "Cream",
-                        Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                        Image = "xl.jpg",
-                        Price = "1.5dt",
-                        cat_id = Categories.Sandwich
-                    },
+                   
                     new Product
                     {
                         Name = "Frensh",

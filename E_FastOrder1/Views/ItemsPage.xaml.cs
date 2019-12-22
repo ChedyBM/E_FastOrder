@@ -46,7 +46,7 @@ namespace E_FastOrder1.Views
             ItemsListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+        async void open_cart(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new Cart()));
         }

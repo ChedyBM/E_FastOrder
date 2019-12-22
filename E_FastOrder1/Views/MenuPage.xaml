@@ -16,7 +16,7 @@
                     <ViewCell Height="75">
                         <StackLayout Orientation="Horizontal">
                             <Image HeightRequest="35" WidthRequest="35" Source= "{Binding image}" AnchorX="0.35"/>
-                            <Label Text="{Binding Id}" d:Text="{Binding .}" FontSize="20" TextColor="Black" AnchorY="0.4" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"/>
+                            <Label Text="{Binding Id}" d:Text="{Binding .}" FontSize="20" TextColor="Black" AnchorY="0.5" VerticalOptions="CenterAndExpand"/>
                             
                         </StackLayout>
                     </ViewCell>

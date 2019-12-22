@@ -6,18 +6,30 @@
              mc:Ignorable="d"
              x:Class="E_FastOrder1.Views.ItemDetailPage"
              Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="cart.png" Clicked="open_cart" />
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Spacing="20" Padding="15"  VerticalOptions="FillAndExpand">
+        <ScrollView VerticalOptions="StartAndExpand">
 
-    <StackLayout Spacing="20" Padding="15">
-        <Image Source="{Binding Item.Image}" Aspect="AspectFill"/>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Price:" FontSize="Medium" />
-            <Label Text="{Binding Item.Price}" d:Text="Item name" FontSize="Small"/>
+            <StackLayout>
+                <Image Source="{Binding Item.Image}" Aspect="AspectFill"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Price:" FontSize="Medium" />
+                    <Label Text="{Binding Item.Price}" d:Text="Item name" FontSize="Small"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Description:" FontSize="Medium" WidthRequest="150"/>
+                    <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout VerticalOptions="End" HorizontalOptions="Center">
+        <Button Text="Buy" BackgroundColor="Green" Command="{Binding AddtoCartCommand}" Font="Bold" TextColor="White"  VerticalOptions="End"/>
         </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Description:" FontSize="Medium" />
-            <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
-        </StackLayout>
-        <Button Text="Add to cart"  Command="{Binding AddtoCartCommand}"/>
     </StackLayout>
+        
     
 </ContentPage>

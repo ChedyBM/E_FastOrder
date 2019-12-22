@@ -20,7 +20,10 @@ namespace E_FastOrder1.Views
 
             BindingContext = this.viewModel = viewModel;
         }
-
+        async void open_cart(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new Cart()));
+        }
         public ItemDetailPage()
         {
             InitializeComponent();

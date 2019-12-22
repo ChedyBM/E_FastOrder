@@ -48,8 +48,8 @@ namespace E_FastOrder1.Views
             ItemsListView.ItemsSource = cvm.CartList;
 
             cvm.Title = "Cart";
-
-            totallabel.Text = "Total: " + cvm.totalbind + "dt";
+            if(cvm.CartList.Count != 0)
+                totallabel.Text = "Total: " + cvm.totalbind + "dt";
 
         }
 

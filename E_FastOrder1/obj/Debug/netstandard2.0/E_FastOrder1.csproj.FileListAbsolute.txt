@@ -2,6 +2,7 @@ C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\bin\Debug\netstandard2.0\E
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\bin\Debug\netstandard2.0\E_FastOrder1.dll
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\bin\Debug\netstandard2.0\ref\E_FastOrder1.dll
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\bin\Debug\netstandard2.0\E_FastOrder1.pdb
+C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\E_FastOrder1.csprojAssemblyReference.cache
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\Views\Cart.xaml.g.cs
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
@@ -15,4 +16,3 @@ C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\X
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\E_FastOrder1.dll
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\ref\E_FastOrder1.dll
 C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\E_FastOrder1.pdb
-C:\Users\chedy\source\repos\E_FastOrder1\E_FastOrder1\obj\Debug\netstandard2.0\E_FastOrder1.csprojAssemblyReference.cache

@@ -27,7 +27,8 @@ namespace E_FastOrder1.ViewModels
             try
             {
                 var itemAdded = await DataStore.AddItemAsync(addedItem);
-               
+                
+
 
             }
             catch (Exception ex)

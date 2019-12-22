@@ -8,32 +8,39 @@
              mc:Ignorable="d"
              x:Class="E_FastOrder1.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource NavigationPrimary}">
-            <Label Text="Wrong!"
-                   x:Name="err"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                   IsVisible="False"
-                  TextColor="Red"/>
+        <StackLayout  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+            
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Padding="30">
+                    <Image Source="iit.png" WidthRequest="75" ></Image>
+                    <Label WidthRequest="75"></Label>
+                    <Image Source="fod.png" WidthRequest="75" ></Image>
+                </StackLayout>
+
+            <StackLayout  VerticalOptions="StartAndExpand">
+                <Label HeightRequest="100">
+                    
+                </Label>
             <Entry Placeholder="Username"
                    x:Name="user"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" Text="{Binding Login}">
+                   WidthRequest="175"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" Text="{Binding Login}">
                 <Entry.Behaviors>
                     <local:LoginBehaviour/>
                 </Entry.Behaviors>
             </Entry>
             <Entry Placeholder="Password"
                    x:Name="pwd"
-                   WidthRequest="75"
+                   WidthRequest="175"
                 IsPassword="True"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="FillAndExpand" Text="{Binding Password}">
+                HorizontalOptions="Center" Text="{Binding Password}">
                 <Entry.Behaviors>
                     <local:PasswordBehaviour/>
                 </Entry.Behaviors>
             </Entry>
-            <Button x:Name="btn" Text="Login" BackgroundColor="Green" Command="{Binding LoginCommand}"></Button>
+            <Button x:Name="btn" Text="Login" VerticalOptions="Center" HorizontalOptions="Center"  BackgroundColor="Green" Command="{Binding LoginCommand}"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
